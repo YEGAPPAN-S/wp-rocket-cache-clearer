@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WP Rocket Cache Clearer</title>
+    <style>
+        body { 
+            width: 300px; 
+            padding: 15px; 
+            font-family: Arial, sans-serif; 
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .button:hover { background: #0056b3; }
+        .status-box {
+            margin-top: 15px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .status-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>WP Rocket Cache Clearer</h2>
+
+    <button class="button" id="clear-all">Clear All Caches</button>
+
+    <div class="status-box">
+        <div class="status-title">Clearing Status:</div>
+        <div id="status">Waiting for action...</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Universal WP Rocket Cache Clearer",
+    "version": "1.4",
+    "description": "Clear cache for all logged-in WordPress sites with one click",
+    "permissions": ["scripting", "activeTab", "storage"],
+    "host_permissions": ["https://*/wp-admin/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/wp-admin/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    }
+  }
+  
